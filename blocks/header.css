@@ -67,7 +67,7 @@
       align-items: end;
     }
     
-    .header__footer_horario {
+    .header__footer-horario {
         list-style-type: none;
         position: relative;
         margin: 0;
@@ -79,4 +79,5 @@
        font-weight: 500;
        color: #838383;
        margin: 0 0 0 auto;
+       list-style-type: none;
     }
