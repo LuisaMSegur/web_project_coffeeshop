@@ -1,14 +1,51 @@
 .header {
     background-color: #ffffff;
     background-image: url(/images/background_header.svg);
-    background-size: cover;
-    height: 100vh;
-    min-height: 720px;
-    max-height: 800px;
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
+    background-size:cover;
+    background-position: 100%;
+    background-repeat: repeat;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr auto;
+    grid-template-areas: 
+    "nav nav"
+    "title image"
+    "description image"
+    "footer footer";
+
      }
+     .header__nav {
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 30px 50px 0;
+    }
+    
+    .header__logo {
+        width: 105px;
+        height: 39px;
+        grid-area: logo;
+    }
+    
+    .header__links {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .header__link {
+        font-family: "Inter";
+        font-weight: 500;
+        text-decoration: none;
+        color: black;
+        margin: 0 15px;
+    }
+    
+    .header__link:hover {
+        color: #2F80ED;
+    }
 
      .header__title {
         max-width: 709px;
@@ -17,13 +54,11 @@
         font-size: 58px;
         line-height: 72px;
         letter-spacing: 1px;
-        margin: auto 0;
-        position: absolute;
-        top: 183px;
-        left: 80px;
-        
-    
-        
+        margin: auto 0;   
+        grid-area: title; 
+        padding: 100px 0 0 30px;
+     display: flex;
+     flex-wrap: wrap;   
     }
     
     .header__span-accent {
@@ -36,48 +71,40 @@
     }
     
     .header__description {
-        max-width: 683px;
         font-family: "Noto Serif";
         font-size: 20px;
         line-height: 30px;
-        padding-top: 28px;
-        position: absolute;
-        left: 80px;
-        top: 300px;
+        grid-area: description;
+        margin: 0 30px;
     }
     
     .header__image {
-        width: 646px;
-        height: 568px;
-        position: absolute;
-        top:124px;
-        right: 5px;
-        margin: 0 auto;
-        box-sizing: border-box;
+        max-width: 646px;
+        grid-area: image;
     }
     
     .header__footer {
         font-family: "Inter";
        font-weight: 500;
        color: #838383;
-       margin: auto 80px 40px 0;
-      position: relative;
-      display: flex;
-      width: 100%;
-      align-items: end;
+       margin: 0 30px 40px 30px;
+       grid-area: footer;
+       display: flex;
+       flex-direction: row;
+    justify-content: space-between;
     }
     
     .header__footer-horario {
         list-style-type: none;
-        position: relative;
-        margin: 0;
         padding: 0;
+        line-height: 28px;
     }
     
     .header__paragraph {
       font-family: "Inter";
        font-weight: 500;
        color: #838383;
-       margin: 0 0 0 auto;
        list-style-type: none;
+       display: flex;
+    align-self: end;
     }
