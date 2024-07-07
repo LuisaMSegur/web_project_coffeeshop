@@ -6,6 +6,7 @@
     color:#ffffff;
     display: flex;
     flex-direction: column;
+    max-width: 1400px;
 }
 
 .recipes__title {
